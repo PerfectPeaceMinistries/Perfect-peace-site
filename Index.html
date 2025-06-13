@@ -9,105 +9,109 @@
     body {
       margin: 0;
       font-family: 'EB Garamond', serif;
-      background-color: #f8fdfd;
-      color: #2c3e50;
-      line-height: 1.7;
+      color: white;
     }
 
-    header {
-      background-image: url("https://perfectpeace.online/IMG_6799.jpeg");
+    .hero {
+      background-image: url('serene-background.jpg');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px #000;
       text-align: center;
+      padding: 20px;
     }
 
-    header h1 {
+    .hero h1 {
       font-size: 3rem;
       margin: 0;
     }
 
-    .scripture {
+    .hero p {
       font-size: 1.2rem;
       margin-top: 10px;
     }
 
-    .blog-header {
-      background-color: #a3d2ca;
-      padding: 20px;
+    .section {
+      background-color: #f8fdfd;
+      color: #2c3e50;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    .blog-header h2 {
-      margin: 0;
-      color: white;
+    .about {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .blog-list {
+      background-color: #eaf6f6;
+      padding: 40px 20px;
+    }
+
+    .blog-list h2 {
+      color: #2c3e50;
       font-size: 2rem;
     }
 
-    .post-list {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
     .post-item {
-      margin-bottom: 30px;
-    }
-
-    .post-item h3 {
-      margin-bottom: 5px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
     }
 
     .post-item a {
       color: #1d3557;
+      font-size: 1.4rem;
       text-decoration: none;
-      font-size: 1.3rem;
     }
 
-    .post-item a:hover {
-      text-decoration: underline;
-    }
-
-    .date {
+    .post-item .date {
       font-size: 0.9rem;
-      color: #888;
+      color: #555;
     }
 
     footer {
+      background-color: #eaf6f6;
+      color: #333;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      background-color: #eaf6f6;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="hero">
     <h1>Perfect Peace<br>World Ministries</h1>
-    <p class="scripture">“You keep him in perfect peace whose mind is stayed on You, because he trusts in You.” — Isaiah 26:3</p>
-  </header>
-
-  <div class="blog-header">
-    <h2>Beside Still Waters</h2>
+    <p>"You keep him in perfect peace whose mind is stayed on You..." — Isaiah 26:3</p>
   </div>
 
-  <section class="post-list">
+  <div class="section about">
+    <p>Welcome to Perfect Peace World Ministries. This site is devoted to sharing sound doctrine, biblical truth, and Christ-centered teachings that encourage, edify, and equip believers. Founded on the Reformed faith and grounded in Scripture, this ministry exists to glorify God and proclaim His sovereignty, grace, and peace through every lesson and word shared here.</p>
+  </div>
+
+  <div class="blog-list">
+    <h2>Beside Still Waters</h2>
     <div class="post-item">
-      <h3><a href="unseen-faith.html">Unseen Faith</a></h3>
+      <a href="unseen-faith.html">Unseen Faith</a>
       <div class="date">June 13, 2025</div>
     </div>
     <div class="post-item">
-      <h3><a href="Freedom-from-sin.html">Freedom from Sin</a></h3>
+      <a href="freedom-from-sin.html">Freedom from Sin</a>
       <div class="date">June 13, 2025</div>
     </div>
     <div class="post-item">
-      <h3><a href="spiritual-disciplines.html">Growing in Godliness</a></h3>
+      <a href="spiritual-disciplines.html">Growing in Godliness</a>
       <div class="date">June 13, 2025</div>
     </div>
-  </section>
+  </div>
 
   <footer>
     © 2025 Perfect Peace World Ministries • All content Christ-centered and freely offered.
