@@ -11,49 +11,49 @@
       font-family: 'EB Garamond', serif;
       background-color: #f8fdfd;
       color: #2c3e50;
-      text-align: center;
+      line-height: 1.7;
     }
-
     header {
-      background: url('IMG_6799.jpeg') no-repeat center center/cover;
+      background: url('IMG_6799.jpeg') no-repeat center/cover;
       height: 100vh;
-      color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    }
-
-    .scripture {
-      font-size: 1.2rem;
-      max-width: 600px;
+      color: white;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
-
-    nav {
-      background-color: #a3d2ca;
-      padding: 15px;
-      text-align: center;
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-
-    nav a {
-      color: white;
+    .post-list {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .post-item {
+      margin-bottom: 30px;
+    }
+    .post-item h2 {
+      margin: 0;
+      font-size: 1.75rem;
+      color: #1d3557;
+    }
+    .post-item h2 a {
+      color: inherit;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
     }
-
+    .post-item .date {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
     footer {
-      background-color: #eaf6f6;
+      text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+      background-color: #eaf6f6;
       margin-top: 40px;
     }
   </style>
@@ -61,18 +61,27 @@
 <body>
 
   <header>
-    <h1>Perfect Peace World Ministries</h1>
-    <p class="scripture">“You keep him in perfect peace whose mind is stayed on You, because he trusts in You.” — Isaiah 26:3</p>
+    <h1>Beside Still Waters</h1>
+    <p style="font-size:1.2rem; margin-top: 10px;">Perfect Peace World Ministries</p>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Beside Still Waters</a>
-  </nav>
+  <div class="post-list">
+    <div class="post-item">
+      <h2><a href="spiritual-disciplines.html">Growing in Godliness – Spiritual Disciplines</a></h2>
+      <div class="date">June 13, 2025</div>
+    </div>
+    <div class="post-item">
+      <h2><a href="freedom-from-sin.html">Freedom from Sin</a></h2>
+      <div class="date">June 13, 2025</div>
+    </div>
+    <div class="post-item">
+      <h2><a href="unseen-faith.html">Unseen Faith</a></h2>
+      <div class="date">June 13, 2025</div>
+    </div>
+  </div>
 
   <footer>
-    © 2025 Perfect Peace World Ministries • All content Christ-centered and freely offered.
+    © 2025 Perfect Peace World Ministries • All content Christ‑centered and freely offered.
   </footer>
 
 </body>
