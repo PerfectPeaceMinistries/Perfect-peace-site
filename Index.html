@@ -13,75 +13,104 @@
       color: #2c3e50;
       line-height: 1.7;
     }
+
     header {
-      background: url('IMG_6799.jpeg') no-repeat center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background-image: url("https://perfectpeace.online/IMG_6799.jpeg");
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
       color: white;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      text-align: center;
     }
+
     header h1 {
       font-size: 3rem;
       margin: 0;
     }
+
+    .scripture {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .blog-header {
+      background-color: #a3d2ca;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .blog-header h2 {
+      margin: 0;
+      color: white;
+      font-size: 2rem;
+    }
+
     .post-list {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     .post-item {
       margin-bottom: 30px;
     }
-    .post-item h2 {
-      margin: 0;
-      font-size: 1.75rem;
+
+    .post-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .post-item a {
       color: #1d3557;
-    }
-    .post-item h2 a {
-      color: inherit;
       text-decoration: none;
+      font-size: 1.3rem;
     }
-    .post-item .date {
+
+    .post-item a:hover {
+      text-decoration: underline;
+    }
+
+    .date {
       font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 10px;
+      color: #888;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
       background-color: #eaf6f6;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Beside Still Waters</h1>
-    <p style="font-size:1.2rem; margin-top: 10px;">Perfect Peace World Ministries</p>
+    <h1>Perfect Peace<br>World Ministries</h1>
+    <p class="scripture">“You keep him in perfect peace whose mind is stayed on You, because he trusts in You.” — Isaiah 26:3</p>
   </header>
 
-  <div class="post-list">
-    <div class="post-item">
-      <h2><a href="spiritual-disciplines.html">Growing in Godliness – Spiritual Disciplines</a></h2>
-      <div class="date">June 13, 2025</div>
-    </div>
-    <div class="post-item">
-      <h2><a href="freedom-from-sin.html">Freedom from Sin</a></h2>
-      <div class="date">June 13, 2025</div>
-    </div>
-    <div class="post-item">
-      <h2><a href="unseen-faith.html">Unseen Faith</a></h2>
-      <div class="date">June 13, 2025</div>
-    </div>
+  <div class="blog-header">
+    <h2>Beside Still Waters</h2>
   </div>
 
+  <section class="post-list">
+    <div class="post-item">
+      <h3><a href="unseen-faith.html">Unseen Faith</a></h3>
+      <div class="date">June 13, 2025</div>
+    </div>
+    <div class="post-item">
+      <h3><a href="Freedom-from-sin.html">Freedom from Sin</a></h3>
+      <div class="date">June 13, 2025</div>
+    </div>
+    <div class="post-item">
+      <h3><a href="spiritual-disciplines.html">Growing in Godliness</a></h3>
+      <div class="date">June 13, 2025</div>
+    </div>
+  </section>
+
   <footer>
-    © 2025 Perfect Peace World Ministries • All content Christ‑centered and freely offered.
+    © 2025 Perfect Peace World Ministries • All content Christ-centered and freely offered.
   </footer>
 
 </body>
