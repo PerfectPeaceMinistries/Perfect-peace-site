@@ -12,29 +12,48 @@
         }
 
         .hero {
+            position: relative;
             background: url('IMG_6953.jpeg') no-repeat center center;
             background-size: cover;
-            color: white;
-            text-align: center;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
             padding: 60px 20px;
         }
 
-        .hero h1 {
-            font-size: 4em;
+        .hero-content h1 {
+            font-size: 5em;
             font-weight: 900;
-            margin-bottom: 40px;
-            text-shadow: 4px 4px 8px #000;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            letter-spacing: 1.5px;
         }
 
-        .hero p {
-            font-size: 2.2em;
+        .hero-content p {
+            font-size: 2.5em;
             font-weight: 800;
-            margin: 20px 0;
-            text-shadow: 4px 4px 8px #000;
+            margin: 25px 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            letter-spacing: 1px;
         }
 
         .links {
@@ -45,9 +64,9 @@
 
         .links h2 {
             font-size: 2.4em;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #333;
-            font-weight: 800;
+            font-weight: 900;
         }
 
         .links a {
@@ -65,7 +84,7 @@
 
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             background-color: #f4f4f4;
             font-size: 1.1em;
             color: #666;
@@ -75,9 +94,12 @@
 </head>
 <body>
     <div class="hero">
-        <h1>Perfect Peace<br>World Ministries</h1>
-        <p>“You keep him in perfect peace whose mind is stayed on You.”<br>Isaiah 26:3</p>
-        <p>“He leads me beside still waters.”<br><em>Psalm 23:2b</em></p>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Perfect Peace<br>World Ministries</h1>
+            <p>“You keep him in perfect peace whose mind is stayed on You.”<br>Isaiah 26:3</p>
+            <p>“He leads me beside still waters.”<br><em>Psalm 23:2b</em></p>
+        </div>
     </div>
 
     <div class="links">
