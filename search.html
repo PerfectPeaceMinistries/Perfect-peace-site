@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Perfect Peace</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <style>
+    body {
+      font-family: 'EB Garamond', serif;
+      background-color: #f8fdfd;
+      color: #2c3e50;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    #searchBox {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+      margin: 20px auto;
+      display: block;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .result {
+      max-width: 700px;
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .result h3 {
+      margin-top: 0;
+    }
+    .result p {
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Search the Blog</h1>
+  </header>
+
+  <input type="text" id="searchBox" placeholder="Type to search all blog posts...">
+
+  <div id="results"></div>
+
+  <script>
+    let idx = null;
+    let data = [];
+
+    fetch('search.json')
+      .then(response => response.json())
+      .then(json => {
+        data = json;
+        idx = lunr(function () {
+          this.ref('id');
+          this.field('title');
+          this.field('excerpt');
+
+          data.forEach(function (doc) {
+            this.add(doc);
+          }, this);
+        });
+      });
+
+    document.getElementById('searchBox').addEventListener('input', function () {
+      const query = this.value.trim();
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+
+      if (!idx || query.length === 0) return;
+
+      const results = idx.search(query);
+      if (results.length === 0) {
+        resultsDiv.innerHTML = '<p style="text-align:center;">No results found.</p>';
+        return;
+      }
+
+      results.forEach(result => {
+        const post = data.find(d => d.id === result.ref);
+        const div = document.createElement('div');
+        div.className = 'result';
+        div.innerHTML = `<h3><a href="${post.url}">${post.title}</a></h3><p>${post.excerpt}</p>`;
+        resultsDiv.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
